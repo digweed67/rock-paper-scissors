@@ -5,13 +5,11 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
-
+let computerSelection; 
 function displayComputerChoice () {
-    let computerSelection = getComputerChoice();
+    computerSelection = getComputerChoice();
     document.getElementById("computerChoiceDisplay").textContent = `Computer choice: ${computerSelection}`;
 }; 
-
-
 
 
 
@@ -47,3 +45,18 @@ let scissorsImage = document.querySelector(".scissors").addEventListener("click"
 });
 
 
+/* round 
+function playRound(playerSelection, computerSelection) {
+    
+    if (playerSelection === computerSelection){
+        document.getElementById("result").textContent = "It's a tie!";
+    } else if (
+        (playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "paper") ||
+        (playerSelection === "paper" && computerSelection === "rock") 
+        ) {
+        document.getElementById("result").textContent = (`You win! ${playerSelection} beats ${computerSelection}`);
+    } else {
+        document.getElementById("result").textContent = "Computer wins!"
+    }
+}
+*/
