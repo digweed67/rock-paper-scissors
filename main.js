@@ -1,17 +1,18 @@
 
-
-/* function getComputerChoice() {
+function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
 }
 
 
-/* function displayComputerChoice () {
+function displayComputerChoice () {
     let computerSelection = getComputerChoice();
     document.getElementById("computerChoiceDisplay").textContent = `Computer choice: ${computerSelection}`;
-} 
-*/ 
+}; 
+
+
+
 
 
 
@@ -31,15 +32,18 @@ function displayPlayerChoice () {
 
 let rockImage = document.querySelector(".rock").addEventListener("click", function () {
     setPlayerChoice("rock");
+    displayComputerChoice ();
 });
  
 
 let paperImage = document.querySelector(".paper").addEventListener("click", function() {
     setPlayerChoice("paper");
+    displayComputerChoice ();
 });
 
 let scissorsImage = document.querySelector(".scissors").addEventListener("click", function() {
     setPlayerChoice("scissors");
+    displayComputerChoice ();
 });
 
 
