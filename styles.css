@@ -38,6 +38,14 @@ body {
 
 }
 
+img {
+    cursor: pointer; 
+}
+
+img:hover {
+    transform: translateY(-5px);
+  }
+
 .text {
     display: flex;
     justify-content: center;
