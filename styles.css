@@ -72,6 +72,12 @@ button {
     background-color: #F3F4FD;
 }
 
+button:hover {
+    background-color:#6f7ce7;
+    transition: 0.7s;
+    color: white; 
+}
+
 img {
     padding: 5px;
     
