@@ -68,12 +68,12 @@ function playRound(playerSelection, computerSelection) {
             ) {
                     
             result = `You win! ${playerSelection} beats ${computerSelection}`;
-            playerScore++        
+            document.getElementById("playerScoreDisplay").textContent = `Player: ${playerScore++}`;         
     
         } else {
                     
             result = "Computer wins!"
-            computerScore++
+            document.getElementById("computerScoreDisplay").textContent = `Computer: ${computerScore++}`;
             }
                 
             document.getElementById("result").textContent = result;
