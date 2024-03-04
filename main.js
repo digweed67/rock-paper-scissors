@@ -48,24 +48,39 @@ let scissorsImage = document.querySelector(".scissors").addEventListener("click"
 });
 
 
-let playerScore = 0;
-let computerScore = 0; 
-for (let i = 0; i < 5; i++) {
 
-        function playRound(playerSelection, computerSelection) {
-            
-            if (playerSelection === computerSelection){
-                document.getElementById("result").textContent = "It's a tie!";
-            } else if (
-                (playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "paper") ||
-                (playerSelection === "paper" && computerSelection === "rock") 
-                ) {
-                document.getElementById("result").textContent = `You win! ${playerSelection} beats ${computerSelection}`;
-    
+let playerScore = 0;
+let computerScore = 0;
  
-            } else {
-                document.getElementById("result").textContent = "Computer wins!"
+
+
+function playRound(playerSelection, computerSelection) {
+    let result;
+    if (playerSelection !== undefined && playerSelection !== null &&
+        computerSelection !== undefined && computerSelection !== null) {
+        if (playerSelection === computerSelection){
+                    
+            result = "It's a tie!"
+
+        } else if (
+            (playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "paper") ||
+            (playerSelection === "paper" && computerSelection === "rock") 
+            ) {
+                    
+            result = `You win! ${playerSelection} beats ${computerSelection}`;
+            playerScore++        
+    
+        } else {
+                    
+            result = "Computer wins!"
+            computerScore++
             }
-        }
+                
+            document.getElementById("result").textContent = result;
+
     }
+
+        
+
+}    
 
