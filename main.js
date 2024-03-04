@@ -100,7 +100,7 @@ function endGame() {
     playerScore = 0;
     computerScore = 0;
     roundsPlayed = 0;
-    displayScores();  // Update the scores on the screen
+    displayScores();  
 }
 
 function displayScores() {
@@ -109,12 +109,11 @@ function displayScores() {
 }
 
 
-document.getElementsByTagName("button").addEventListener("click", resetGame()); 
-function resetGame () {
-    document.getElementById("playerChoiceDisplay").textContent = "";
-    document.getElementById("computerChoiceDisplay").textContent = "";
-    playerScore = "";
-    computerScore = ""; 
-    document.getElementById("result").textContent = "";
+document.getElementById("button").addEventListener("click", resetGame); 
 
+
+function resetGame () {
+    document.getElementById("playerScoreDisplay").textContent = "Player:";
+    document.getElementById("computerScoreDisplay").textContent = "Computer:";
+    document.getElementById("result").textContent = "";
 }
